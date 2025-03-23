@@ -1,6 +1,7 @@
 /**
  * @type {import('tailwindcss').Config}
  */
+
 module.exports = {
     content: [
       "./pages/**/*.js",
@@ -11,9 +12,9 @@ module.exports = {
     theme: {
       extend: {
         colors: {
-          lightHover: "#fcf4ff",
-          darkHover: "#2a004a",
-          darkTheme: "#11001F",
+          'lightHover': "#fcf4ff",
+          'darkHover': "#2a004a",
+          'darkTheme': "#11001F",
         },
         fontFamily: {
           Outfit: ["Outfit", "sans-serif"],
@@ -23,6 +24,9 @@ module.exports = {
           'black': "4px 4px 0px #000",
           'white': "4px 4px 0px #fff",
         },
+        gridTemplateColumns: {
+
+        }
       },
     },
     plugins: [],
