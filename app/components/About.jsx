@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 function About() {
     return (
-        <div id='about' className='w-full px-[12] py-10 scroll-mt-20'>
+        <div id='about' className='w-full px-[12%] py-10 scroll-mt-20'>
             <h4 className='text-center mb-2 text-lg font-Ovo'>Introduction</h4>
             <h2 className='text-center text-5xl font-Ovo'>About me</h2>
 
@@ -18,7 +18,7 @@ function About() {
                     </p>
                     <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
                         {infoList.map(({icon, iconDark, title, description}, index)=>(
-                            <li className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-2 duration-500 hover:shadow-black' key={index}>
+                            <li className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-2 duration-500 hover:shadow-[4px_4px_0px_#000]' key={index}>
                                 <Image src={icon} alt={title} className='w-7 mt-3'/> 
                                 <h3 className='my-4 font-semibold text-gray-700'> 
                                     {title}

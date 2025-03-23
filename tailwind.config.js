@@ -2,10 +2,11 @@
  * @type {import('tailwindcss').Config}
  */
 module.exports = {
-  mode: "jit",
     content: [
-      "./pages/**/*.{js,ts,jsx,tsx}",
-      "./components/**/*.{js,ts,jsx,tsx}",
+      "./pages/**/*.js",
+      "./components/**/*.js",
+      "./app/**/*.{js,ts,jsx,tsx}",
+      "./app/components/**/*.{js,ts,jsx,tsx}"
     ],
     theme: {
       extend: {
@@ -21,9 +22,9 @@ module.exports = {
         boxShadow: {
           'black': "4px 4px 0px #000",
           'white': "4px 4px 0px #fff",
-        }
+        },
       },
     },
     plugins: [],
-  };
+  }
   

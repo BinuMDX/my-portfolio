@@ -9,19 +9,19 @@ const Navbar = () => {
 
   const sideMenuRef = useRef();
 
-  const openMenu =()=>{
+  const openMenu = () => {
     sideMenuRef.current.style.transform = 'translateX(-16rem)';
   }
 
-  const closeMenu =()=>{
+  const closeMenu = () => {
     sideMenuRef.current.style.transform = 'translateX(16rem)';
   }
 
-  useEffect(()=>{
-    window.addEventListener('scroll', ()=>{ 
-      if(scrollY > 50){
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (scrollY > 50) {
         setIsScroll(true)
-      }else{
+      } else {
         setIsScroll(false)
       }
     })
@@ -37,9 +37,9 @@ const Navbar = () => {
           <Image src={assets.logo_me} alt='' className='w-28 cursor-pointer mr-14' />
         </a>
 
-        <ul className='hidden md:flex items-center space-x-10 gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50'>
+        <ul className={`hidden md:flex items-center space-x-10 gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"}`}>
           <li><a href='#top' className='font-Ovo'>Home</a></li>
-          <li><a href='#about me' className='font-Ovo'>About</a></li>
+          <li><a href='#about' className='font-Ovo'>About</a></li>
           <li><a href='#services' className='font-Ovo'>Services</a></li>
           <li><a href='#projects' className='font-Ovo'>Projects</a></li>
           <li><a href='#contact' className='font-Ovo'>Contact me</a></li>
@@ -57,9 +57,9 @@ const Navbar = () => {
 
         {/*-- ----mobile menu---- --*/}
         <ul ref={sideMenuRef} className='flex md:hidden flex-col gap-4 px-10 py-20 fixed -right-64 top-0 h-screen w-64 z-50 bg-rose-50 transition duration-300'>
-        <div className='absolute right-6 top-6' onClick={closeMenu}>
-          <Image src={assets.close_black} alt='' className='w-5 cursor-pointer'/>
-        </div>
+          <div className='absolute right-6 top-6' onClick={closeMenu}>
+            <Image src={assets.close_black} alt='' className='w-5 cursor-pointer' />
+          </div>
           <li><a href='#top' className='font-Ovo' onClick={closeMenu}>Home</a></li>
           <li><a href='#about me' className='font-Ovo' onClick={closeMenu}>About</a></li>
           <li><a href='#services' className='font-Ovo' onClick={closeMenu}>Services</a></li>
@@ -67,7 +67,7 @@ const Navbar = () => {
           <li><a href='#contact' className='font-Ovo' onClick={closeMenu}>Contact me</a></li>
         </ul>
 
-      </nav>   
+      </nav>
     </>
   )
 }
